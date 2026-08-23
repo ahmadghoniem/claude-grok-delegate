@@ -1,0 +1,15 @@
+{
+  "name": "claude-grok-delegate",
+  "owner": {
+    "name": "Ahmed Ghoniem",
+    "url": "https://github.com/ahmadghoniem"
+  },
+  "plugins": [
+    {
+      "name": "grok",
+      "source": "./plugins/grok",
+      "description": "Delegate coding tasks from Claude Code to the Grok Build CLI.",
+      "strict": false
+    }
+  ]
+}
