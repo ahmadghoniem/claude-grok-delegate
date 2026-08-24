@@ -1,0 +1,15 @@
+# `core.autocrlf=true` is set globally on this machine, which rewrites LF to CRLF
+# on checkout. Vite's transform chokes on CRLF in some .mjs files — it fails at
+# import time with `SyntaxError: Invalid or unexpected token`, while `node --check`
+# and bare `node` accept the same file. That silently dropped two whole test suites
+# (result + delegate-worker) from the run. `text=auto eol=lf` overrides autocrlf
+# for this repo, so a fresh clone cannot reintroduce the problem.
+* text=auto eol=lf
+
+# Binaries git must not touch.
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
